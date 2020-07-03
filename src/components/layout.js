@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+//import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
@@ -17,6 +18,12 @@ const TemplateWrapper = ({ children }) => {
           datoCmsSite {
             globalSeo {
               siteName
+              fallbackSeo {
+                image {
+                  url
+                  
+                }
+              }
             }
             faviconMetaTags {
               ...GatsbyDatoCmsFaviconMetaTags
@@ -51,9 +58,14 @@ const TemplateWrapper = ({ children }) => {
           />
           <div className="container__sidebar">
             <div className="sidebar">
-              <h6 className="sidebar__title">
-                <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-              </h6>
+            <Link to={'/'}>
+                <img src={data.datoCmsSite.globalSeo.fallbackSeo.image.url} alt={data.datoCmsSite.globalSeo.fallbackSeo.alt}/>
+              </Link>
+              {/*        
+                <h6 className="sidebar__title">
+                  <Link to="/">{//data.datoCmsSite.globalSeo.siteName}</Link>
+                </h6>
+              */}
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
@@ -91,6 +103,7 @@ const TemplateWrapper = ({ children }) => {
               <div className="mobile-header">
                 <div className="mobile-header__menu">
                   <button
+                    aria-label="Show Menu"
                     onClick={e => {
                       e.preventDefault();
                       setShowMenu(!showMenu);
