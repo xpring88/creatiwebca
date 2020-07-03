@@ -24,25 +24,5 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
-    {
-      resolve: "gatsby-theme-minimalist",
-  
-      options: {
-        // SEO
-        title: "Your site title",
-        description: "Your site description",
-        siteUrl: "https://your-future-site.com",
-        appName: "Your pwa app name",
-  
-        // Content
-        headline: "Your headline",
-        subHeadline: "Your <strong>meaningful</strong> message.<br/>",
-        socialList: [{
-          icon: 'FaGithub', // a detailed explanation can be found in the options section
-          url: 'https://github.com/your-profile',
-          ariaLabel: 'Link to my GitHub profile',
-        }]
-      }
-    }
   ],
 }
