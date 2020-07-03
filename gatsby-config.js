@@ -24,5 +24,15 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        analizerMode: "server",
+        analyzerPort: 3001,
+        defaultSizes: "gzip"
+      }
+    }   
   ],
 }
+
+

@@ -1,6 +1,6 @@
 {
   "name": "creatiweb",
-  "description": "Creatiweb portfolio Website",
+  "description": "Creatiweb Portfolio Website",
   "version": "1.0.0",
   "author": "Harold Zhac <hello@creatiweb.ca>",
   "dependencies": {
@@ -37,6 +37,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   },
   "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "prettier": "^1.17.0"
   }
 }
