@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-//import Img from "gatsby-image";
+import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
@@ -18,10 +18,9 @@ const TemplateWrapper = ({ children }) => {
           datoCmsSite {
             globalSeo {
               siteName
-              fallbackSeo {
-                image {
+              fallbackSeo{
+                image{
                   url
-                  
                 }
               }
             }
@@ -58,8 +57,8 @@ const TemplateWrapper = ({ children }) => {
           />
           <div className="container__sidebar">
             <div className="sidebar">
-            <Link to={'/'}>
-                <img src={data.datoCmsSite.globalSeo.fallbackSeo.image.url} alt={data.datoCmsSite.globalSeo.fallbackSeo.alt}/>
+              <Link to={'/'}>
+                <img src={data.datoCmsSite.globalSeo.fallbackSeo.image.url} alt={`Web Development Agency`}/>
               </Link>
               {/*        
                 <h6 className="sidebar__title">
@@ -110,9 +109,9 @@ const TemplateWrapper = ({ children }) => {
                     }}
                   />
                 </div>
-                <div className="mobile-header__logo">
-                  <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-                </div>
+                <Link to={'/'}>
+                  <img src={data.datoCmsSite.globalSeo.fallbackSeo.image.url} alt={`Web Development Agency`} />
+                </Link>
               </div>
             </div>
             {children}
