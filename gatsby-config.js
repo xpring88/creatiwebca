@@ -27,9 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {
-        analizerMode: "server",
-        analyzerPort: 3001,
-        defaultSizes: "gzip"
+        devMode: true,
       }
     }   
   ],

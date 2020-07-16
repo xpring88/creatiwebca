@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
 import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
@@ -60,11 +59,6 @@ const TemplateWrapper = ({ children }) => {
               <Link to={'/'}>
                 <img src={data.datoCmsSite.globalSeo.fallbackSeo.image.url} alt={`Web Development Agency`}/>
               </Link>
-              {/*        
-                <h6 className="sidebar__title">
-                  <Link to="/">{//data.datoCmsSite.globalSeo.siteName}</Link>
-                </h6>
-              */}
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
